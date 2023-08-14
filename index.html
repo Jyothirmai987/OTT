@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="signin.html">
+  <link rel="stylesheet" href="signup.html">
+  <link rel="icon" href="ott_icon.jpg">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+  <title>MY OTT</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    nav {
+      height: 100px;
+      width: 100%;
+      /* background-color: aquamarine; */
+      background: rgb(226, 226, 226, 0.4);
+      backdrop-filter: blur(8px);
+      margin: 10px;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo img {
+      height: 100px;
+      width: 100px;
+    }
+
+    nav .nav-items {
+      position: absolute;
+      right: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      font-size: 20px;
+      padding: 15px;
+    }
+
+    .nav-items:hover a {
+      filter: blur(1px);
+    }
+
+    .nav-items a:hover {
+      scale: 1.5;
+      rotate: 360deg;
+      color: red;
+      box-shadow: 3px 3px 10px 10px plum inset;
+
+      text-shadow: 1px 1px 2px black;
+      /* filter: blur(2px); */
+    }
+
+    .carousel-inner img {
+      height: 800px;
+      width: 80%;
+
+
+    }
+
+    .carousel-inner {
+      margin: 120px 0px 0px 200px;
+
+    }
+
+    .carousel-control-prev-icon {
+      position: relative;
+      left: 100px;
+
+    }
+
+    .carousel-control-next-icon {
+      position: relative;
+      right: 100px;
+    }
+
+    div h2 {
+      height: 50px;
+      width: 100%;
+      background-color: cadetblue;
+    }
+
+    .freq1 h2 {
+      height: 50px;
+      width: 100%;
+      background-color: cadetblue;
+      color: crimson;
+      font-size: 40px;
+      font-family: cursive;
+
+    }
+
+    .frequently:hover {
+      color: whitesmoke;
+      display: inline;
+    }
+
+    .recently {
+      height: 50px;
+      width: 100%;
+      background-color: cadetblue;
+      color: crimson;
+      font-size: 40px;
+      font-family: cursive;
+
+    }
+
+    .freq1 img {
+      height: 500px;
+      width: 16%;
+    }
+
+    .freq1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .freq1 img:hover {
+      scale: 1.1;
+      transition: all 2s ease;
+      filter: blur(5px);
+      opacity: 0.5;
+
+    }
+    .recentt img:hover{
+      scale: 1.1;
+      transition: all 2s ease;
+      filter: blur(5px);
+      opacity: 0.5;
+      
+
+    }
+    .tr{
+      height: 50px;
+      width: 100%;
+      background-color: cadetblue;
+    }
+    .tr h4{
+      background-color: cadetblue;
+      color: crimson;
+      font-size: 40px;
+      font-family: cursive;
+    }
+    .toprated-img img:hover{
+      transition: all 3s ease;
+      scale: 1.1;
+      filter: blur(5px);
+      opacity: 0.5;
+
+    }
+    
+    footer{
+      height: 500px;
+      width: 100%;
+      /* display: inline-block; */
+    }
+    .company{
+      height: 40px;
+      width: 100px;
+      color: whitesmoke;
+      display: inline-block;
+      position: relative;
+      left: 100px;
+    
+    }.company:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }.content{
+      height: 40px;
+      width: 150px;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 300px;
+      margin: 50px;
+    
+    }
+    .content:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }
+    .help{
+      height: 40px;
+      width: 100px;
+      color: whitesmoke;
+      display: inline-block;
+      position: relative;
+      left: 560px; 
+      display: inline;
+      text-decoration: none;
+    }
+    .help .nh1{
+      position: relative;
+      left: 350px;
+      top: -30px;
+      text-decoration: none;
+    }
+    .help .nh2{
+      position: relative;
+      left: 350px;
+      text-decoration: none;
+    }
+    .help:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+    }
+    .contact{
+      height: 40px;
+      width: 120px;
+      color: whitesmoke;
+      /* display: inline-block; */
+      position: relative;
+      left: 1400px;
+      /* right: 200px; */
+      /* right: 600px; */
+    }
+    .contact:hover{
+      box-shadow: 5px 5px 10px 10px gray inset;
+
+
+    }
+    div .fb{
+      height: 50px;
+      width: 50px;
+
+    }
+    .fb img{
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 400px;
+    }
+     .twitter img{
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 300px;
+    }
+    .google img{
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 500px;
+    }
+    .about a{
+      position: relative;
+      left: 100px;
+      top: -120px;
+    }
+    .careers{
+      position: relative;
+      left: 100px;
+      top: -90px;
+      text-decoration: none;
+    }
+    .lang{
+      position: relative;
+      left: 470px;
+      color: bisque;
+      top:-180px;
+    }
+    .lang1{
+      position: relative;
+      padding: 5px;
+      top: 25px;
+      padding: 5px;
+    }
+    .lang2{
+      position: relative;
+      top: -50px;
+    }
+    .rights{
+      position: relative;
+      right: 370px;
+      top: 100px;
+    }
+    
+
+
+  </style>
+
+</head>
+
+<body>
+  <nav>
+    <div class="nav-logo">
+      <img src="ott_logo.jpg" alt="">
+    </div>
+    <div class="nav-items">
+      <a href="#carouselExampleAutoplaying">HOME</a>
+      <a href="#frquent">FREQUENT</a>
+      <a href="#recent">RECENT</a>
+      <a href="#toprated">TOP RATED</a>
+      <a href="">FAVOURITE</a>
+      <a href="#foot">ABOUT</a>
+      <a href="signin.html">SIGNIN</a>
+      <a href="signup.html">SIGNUP</a>
+    </div>
+  </nav>
+  <!-- home page starts -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="bhadhsha.jpg" class="d-block" alt="..." height="800px" width="80%">
+      </div>
+      <div class="carousel-item active">
+        <img src="aaaa.jpg" class="d-block" alt="..." height="800px" width="80%">
+      </div>
+      <div class="carousel-item">
+        <img src="fidahome2.jpg" class="d-block" alt="..." height="800px" width="80%">
+      </div>
+      <div class="carousel-item">
+        <img src="home3.jpg" class="d-block" alt="..." height="800px" width="80%">
+      </div>
+      <div class="carousel-item">
+        <img src="fida home5.jpg" class="d-block" alt="..." height="800px" width="80%">
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+  <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </pre>
+  <!-- home page ends -->
+  <!-- frequenlty watched starts -->
+  <div class="freq1" id="frquent">
+    <h2> <marquee behavior="alternate" direction="">FREQUENTLY WATCHED</marquee></h2>
+    <div class="freq-images">
+      <img src="balupu.jpg" alt="">
+      <img src="july.jpg" alt="">
+      <img src="kushi.jpg" alt="">
+      <img src="jeniliya.jpg" alt="">
+      <img src="fida1.jpg" alt="">
+      <img src="ishq.jpg" alt="">
+      <img src="nani.jpg" alt="">
+      <img src="nani2.jpg" alt="">
+      <img src="nayan.jpg" alt="">
+      <img src="ohmyfrnd.jpg" alt="">
+      <img src="nenusailaja.webp" alt="">
+      <img src="kgf.jpg" alt="">
+    </div>
+
+  </div>
+
+
+  <!-- frequently watched ends -->
+  <!-- recently released starts -->
+  <div class="recently" id="recent">
+    <h3 >
+      <marquee behavior="alternate" direction="" class="recently"> RECENTLY RELEASED</marquee>
+    </h3>
+    </div>
+  <div class="recentt">
+  <img src="rw1.png" alt="" height="500px" width="16%">
+  <img src="rw2.webp" alt="" height="500px" width="16%">
+  <img src="rw3.jpg" alt="" height="500px" width="16%">
+  <img src="rw4.webp" alt="" height="500px" width="16%">
+  <img src="rw6.avif" alt="" height="500px" width="16%">
+  <img src="rw7.webp" alt="" height="500px" width="16%">
+  <img src="rw8.jpg" alt="" height="500px" width="16%">
+  <img src="rw9.webp" alt="" height="500px" width="16%">
+  <img src="rw10.avif" alt="" height="500px" width="16%">
+  <img src="rw11.jpg" alt="" height="500px" width="16%">
+  <img src="rw2.webp" alt="" height="500px" width="16%">
+  <img src="ramayyavasthavayya.jpg" alt="" height="500px" width="16%">
+  </div>
+  
+  
+
+  
+  
+  <!-- recently released ends -->
+  <!-- top rated starts -->
+  <div class="tr" id="toprated">
+      <h4> <marquee behavior=""alternate direction="">TOP RATED</marquee></h4>
+  
+   </div>
+    <div class="toprated-img">
+       <img src="tr1.jpg" alt="" height="500px" width="16%">
+      <img src="tr2.jpg" alt="" height="500px" width="16%">
+      <img src="tr3.webp" alt="" height="500px" width="16%">
+      <img src="tr4.webp" alt="" height="500px" width="16%">
+      <img src="tr5.webp" alt="" height="500px" width="16%">
+      <img src="tr6.jpg.crdownload" alt="" height="500px" width="16%">
+      <img src="tr7.webp" alt="" height="500px" width="16%">
+      <img src="nani2.jpg" alt="" height="500px" width="16%">
+      <img src="vdk.jpg" alt="" height="500px" width="16%">
+      <img src="balupu.jpg" alt="" height="500px" width="16%">
+      <img src="lovestory2.jpg" alt="" height="500px" width="16%">
+      <img src="lovestory.jpg" alt="" height="500px" width="16%">
+
+  
+  </div> 
+  <pre>
+
+
+
+
+  </pre>
+  <!-- top rated ends -->
+
+  <!-- footer starts -->
+    <footer id="foot">
+      <div class="company"> COMPANY </div>
+        <div class="content">VIEW CONTENT IN</div>
+        <div class="help"> NEED HELP?
+          <div class="nh1"><a href="https://help.hotstar.com/in/en/support/home">VISIT HELP CENTER</a></div>
+          <div class="nh2"><a href="https://help.hotstar.com/in/en/support/tickets/feedback">SHARE FEEDBACK</a></div>
+        </div>
+        <div class="contact">CONNECT US</div>
+       <div class="fb"> <a href="https://www.facebook.com/"><img src="https://www.citypng.com/public/uploads/preview/-11595327237ulqckjabpb.png" alt=""></a> </div>
+       <div class="twitter"><a href="https://twitter.com/?lang=en"><img src="https://cdn-icons-png.flaticon.com/512/145/145812.png" alt=""></a></div>
+       <div class="google"> <a href="https://www.google.com/"><img src="https://www.kindpng.com/picc/m/482-4820236_google-icon-white-png-png-download-black-google.png" alt=""></a></div>
+       <div class="about"><a href="https://www.hotstar.com/in/explore">ABOUT US</a></div>
+       <div class="careers"><a href="https://careers.hotstar.com/">CAREERS</a></div>
+       <div class="lang"><p> ENGLISH </p>
+       <div class="lang1" >HINDI</div>
+       <div class="lang2">TELUGU</div>
+       <div class="rights"> <a href="https://www.hotstar.com/privacy-policy/in">&copy;2023 STAR.All Rights Reserved <br>Terms Of Use Privacy  Policy FAQ</a></div>
+       </div>
+    
+    </footer>
+  <!-- footer ends -->
+
+
+</body>
+
+</html>
