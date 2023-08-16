@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signin/signup</title>
+    <style>
+        .table{
+            background-color: cadetblue;
+        }
+        .table input{
+            background-color: cadetblue;
+        }
+        .submit{
+            background-color: cornsilk;
+            height: 50px;
+            width: 70px;
+            box-shadow: 5px 5px 10px black;
+            border-radius: 10px;
+        }
+        .fs{
+            background-color: skyblue;
+            position: relative;
+            left:700px ;
+        }
+    
+    </style>
 </head>
 <body>
     <form action="index.html">
-        <table border="2">
+        
+            <fieldset style="width: 150px; align-self: center;" class="fs">
+                <legend align="center" class="legend"><h1>signin</h1></legend >
+            
+        
+        <table border="1" class="table">
             <tr>
                 <td><label for="name">USERNAME</label></td>
                 <td><input type="text" name="" id="name"> </td>
@@ -31,13 +57,19 @@
                 <td><label for="pswd">enter password</label></td>
                 <td><input type="password" name="" id="pswd"></td>
             </tr>
+
+                </fieldset>
+        
                 </table>
+            </form>
+                
+    
             
                 <br>
-                <input type="submit" value="SUMBIT">
+                <input type="submit" value="SUMBIT" class="submit">
+            
         
-        </table>
-    </form>
+
     
 </body>
 </html>
